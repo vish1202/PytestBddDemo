@@ -59,6 +59,6 @@ def search_results(browser, phrase):
     links_div = browser.find_element_by_id('links')
     assert len(links_div.find_elements_by_xpath('//div')) > 0
     # Check search phrase
-    # update text
+    # update pull
     search_input = browser.find_element_by_name('q')
     assert search_input.get_attribute('value') == phrase
