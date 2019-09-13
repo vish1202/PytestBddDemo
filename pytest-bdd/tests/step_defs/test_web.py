@@ -62,3 +62,4 @@ def search_results(browser, phrase):
     # update pull
     search_input = browser.find_element_by_name('q')
     assert search_input.get_attribute('value') == phrase
+
