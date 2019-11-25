@@ -9,10 +9,8 @@ use Page Object Model or Screenplay Pattern to model web interactions.
 
 import pytest
 
-from pytest_bdd import scenarios, given, when, then, parsers
+from pytest_bdd import scenarios, given, when, then, parsers, scenario
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-
 
 # Constants
 
@@ -21,7 +19,10 @@ DUCKDUCKGO_HOME = 'https://duckduckgo.com/'
 
 # Scenarios
 
-scenarios('../features/web.feature')
+# scenarios('C:/Users/vishal_dewani/PycharmProjects/PytestBddDemo/pytest-bdd/tests/features/web.feature')
+@scenario(r'C:/Users/vishal_dewani/PycharmProjects/PytestBddDemo/pytest-bdd/tests/features/web.feature', 'Basic DuckDuckGo Search')
+def test_basic_duckduckgo_search():
+    print("Alerts Roll-out steps definition file")
 
 
 # Fixtures
@@ -43,23 +44,14 @@ def ddg_home(browser):
 
 # When Steps
 
-@when(parsers.parse('the user searches for "{phrase}"'))
-def search_phrase(browser, phrase):
-    search_input = browser.find_element_by_name('q')
-    search_input.send_keys(phrase + Keys.RETURN)
+@when(parsers.cfparse('the user searches for "{phrase}"'))
+def search_phrase(phrase):
+    # search_input = browser.find_element_by_name('q')
+    # search_input.send_keys(phrase + Keys.RETURN)
+    print("When Statement executed" + phrase)
 
 
 # Then Steps
-
-@then(parsers.parse('results are shown for "{phrase}"'))
-def search_results(browser, phrase):
-    # Check search result list
-    # (A more comprehensive test would check results for matching phrases)
-    # (Check the list before the search phrase for correct implicit waiting)
-    links_div = browser.find_element_by_id('links')
-    assert len(links_div.find_elements_by_xpath('//div')) > 0
-    # Check search phrase
-    # update pull
-    search_input = browser.find_element_by_name('q')
-    assert search_input.get_attribute('value') == phrase
-
+@then(parsers.cfparse('results are shown for "{phrase}"'))
+def search_results(phrase):
+    print("Then Statement executed" + phrase)

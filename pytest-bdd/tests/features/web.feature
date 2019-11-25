@@ -1,4 +1,3 @@
-@web @duckduckgo
 Feature: DuckDuckGo Web Browsing
   As a web surfer,
   I want to find information online,
@@ -13,5 +12,5 @@ Background:
 
 Scenario: Basic DuckDuckGo Search
   When the user searches for "panda"
-  Then results are shown for "panda"
-  And results are shown for "panda"
+  #Then results are shown for "panda"
+  #And results are shown for "panda"
