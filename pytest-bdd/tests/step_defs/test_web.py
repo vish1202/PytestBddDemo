@@ -22,7 +22,7 @@ DUCKDUCKGO_HOME = 'https://duckduckgo.com/'
 # scenarios('C:/Users/vishal_dewani/PycharmProjects/PytestBddDemo/pytest-bdd/tests/features/web.feature')
 @scenario(r'C:/Users/vishal_dewani/PycharmProjects/PytestBddDemo/pytest-bdd/tests/features/web.feature', 'Basic DuckDuckGo Search')
 def test_basic_duckduckgo_search():
-    print("Alerts Roll-out steps definition files")
+    print("Alerts Roll-out steps definition file")
 
 
 # Fixtures
