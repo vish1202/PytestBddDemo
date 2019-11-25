@@ -9,7 +9,7 @@ use Page Object Model or Screenplay Pattern to model web interactions.
 
 import pytest
 
-from pytest_bdd import scenarios, given, when, then, parsers, scenario
+from pytest_bdd import given, when, then, parsers, scenario
 from selenium import webdriver
 
 # Constants
@@ -22,7 +22,7 @@ DUCKDUCKGO_HOME = 'https://duckduckgo.com/'
 # scenarios('C:/Users/vishal_dewani/PycharmProjects/PytestBddDemo/pytest-bdd/tests/features/web.feature')
 @scenario(r'C:/Users/vishal_dewani/PycharmProjects/PytestBddDemo/pytest-bdd/tests/features/web.feature', 'Basic DuckDuckGo Search')
 def test_basic_duckduckgo_search():
-    print("Alerts Roll-out steps definition file")
+    print("Alerts Roll-out steps definition files")
 
 
 # Fixtures
